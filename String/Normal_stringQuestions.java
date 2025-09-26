@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package String;
 
 public class Normal_stringQuestions {
 
@@ -13,15 +13,10 @@ public class Normal_stringQuestions {
 // }
 
 
-
-
-public static String removeSpecialChar(String str){ //A@123$$#%nkit
-    String output = str.replaceAll("[^a-zA-Z]", ""); // [^a-zA-Z] means except a-z and A-Z
-    return output; // Ankit
+public static String removeSpecialChar(String str){
+    str = str.replaceAll("[^a-zA-Z]", ""); // [^a-zA-Z] means except a-z and A-Z everything will be replaced by ""
+    return str;
 }
-
-
-
 
 public static void main(String args[]){
        String str="A@123$$#%nkit";

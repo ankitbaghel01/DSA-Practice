@@ -1,0 +1,32 @@
+package String;
+
+import java.util.Arrays;
+
+public class stringCompression {
+    
+    public static char[] compression(String str){
+       
+        String n = "";
+        int count = 1;
+       for(int i = 0; i<str.length()-1; i++){
+        if(str.charAt(i) == str.charAt(i+1)){
+            count++;
+        }else{
+            n += str.charAt(i);
+            n += count;
+            count = 1;
+        }
+       }
+     
+        n += str.charAt(str.length()-1);
+        n += count;
+
+        return n.toCharArray();
+    }
+
+    public static void main(String arg[]){
+        String str = "aabbcccc";
+        char c[] = compression(str);
+        System.out.println(Arrays.toString(c));
+    }
+}

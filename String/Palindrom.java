@@ -1,4 +1,7 @@
+package String;
 class Palindrom{
+
+
     // public static boolean isPalindrom(String str){
     //   int left = 0, right = str.length()-1;
     //   while(left<right){
@@ -11,7 +14,7 @@ class Palindrom{
     //      return true;  
     // }
 
-    
+
 public static boolean isPalindrom(String str){
    String s = "";
     for(int i= str.length()-1; i>=0; i--){
@@ -23,6 +26,8 @@ public static boolean isPalindrom(String str){
 
     return false;
 }
+
+
 
     public static void main (String arg[]){
         String str="madm";
