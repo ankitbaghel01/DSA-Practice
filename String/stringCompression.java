@@ -25,7 +25,7 @@ public class stringCompression {
     }
 
     public static void main(String arg[]){
-        String str = "aabbcccc";
+        String str = "aabbcccc";  //   String str = "aabbcccc"; ---> output - [a, 2, b, 2, c, 4]
         char c[] = compression(str);
         System.out.println(Arrays.toString(c));
     }

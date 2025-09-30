@@ -26,30 +26,21 @@ public class Anagram {
 
     public static List<List<String>> groupAnagrams(String str[]){
         
-        // create map that contains String as key and list as value
-        Map<String, List<String>> map = new HashMap<>();
+    Map<String ,List<String>> map = new HashMap<>();
 
-//    check every string of string array
-        for(String word : str){
-        // convert word into array and sort 
-            char c[] = word.toCharArray();
-            Arrays.sort(c);
+    for(String word : str){
+        char arr[] = word.toCharArray();
+        Arrays.sort(arr);
+        String key = new String(arr);
 
-            // convert sorted array of word into string 
-            String key = new String (c);
-             
-            // check that sorted word is present in map to not if not then put as key 
-            if(!map.containsKey(key)){
-             map.put(key, new ArrayList<>());
-            }
-
-//   otherwise add in that key as value 
-            map.get(key).add(word);
-
+        if(!map.containsKey(key)){
+            map.put(key, new ArrayList<>());
         }
 
-        // return the value inside the list 
-        return new ArrayList<>(map.values());
+        map.get(key).add(word);
+    }
+    return new ArrayList<>(map.values());
+
     }
 
     public static void main(String args[]){
