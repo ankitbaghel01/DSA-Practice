@@ -3,11 +3,38 @@ package String;
 import java.util.Arrays;
 
 public class stringCompression {
+
+
+//     public static int compression(char[] c){
+//     int i = 0, index = 0;
+//     while(i<c.length){
+//         char current = c[i];
+//         int count = 0;
+
+//         while(i<c.length && c[i] == current){
+//             i++;
+//             count++;
+//         }
+
+//         c[index++] = current;
+        
+        
+
+//         if(count>=1){
+//          for(char s : String.valueOf(count).toCharArray()){
+//             c [index++] = s;
+//          }
+//         }
+//     }
+//     return index;
+//   }
+
     
     public static char[] compression(String str){
        
         String n = "";
         int count = 1;
+        
        for(int i = 0; i<str.length()-1; i++){
         if(str.charAt(i) == str.charAt(i+1)){
             count++;
